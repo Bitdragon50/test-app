@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+FROM node:alpine
 
 WORKDIR /usr/src/app
 

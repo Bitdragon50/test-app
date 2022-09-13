@@ -1,9 +1,5 @@
 FROM node:alpine
 
-ENV PORT 8080
-
-ENV HOST 0.0.0.0
-
 WORKDIR /usr/src/app
 
 COPY package.json .
@@ -14,6 +10,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 4200
 
-CMD ["/usr/src/app/node_modules/.bin/", "ng serve "]
+CMD /usr/src/app/node_modules/.bin/ng serve --host 0.0.0.0 --disable-host-check

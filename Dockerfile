@@ -1,5 +1,9 @@
 FROM node:alpine
 
+ENV PORT 8080
+
+ENV HOST 0.0.0.0
+
 WORKDIR /usr/src/app
 
 COPY package.json .
@@ -12,4 +16,4 @@ COPY . .
 
 EXPOSE 80
 
-CMD ["/usr/src/app/node_modules/.bin/", "ng serve --host 0.0.0.0"]
+CMD ["/usr/src/app/node_modules/.bin/", "ng serve "]

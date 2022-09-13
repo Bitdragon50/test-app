@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE $PORT
 
-CMD /usr/src/app/node_modules/.bin/ng serve --host 0.0.0.0
+CMD ["/usr/src/app/node_modules/.bin/", "ng serve --host 0.0.0.0"]

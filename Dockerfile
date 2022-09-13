@@ -10,6 +10,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE $PORT
+EXPOSE 80
 
 CMD ["/usr/src/app/node_modules/.bin/", "ng serve --host 0.0.0.0"]
